@@ -16,15 +16,15 @@ int main()
 	int input[size];
 
 	int i;
+	int *pint=&input[0];
 	for(i=0;i<size;i++)
 	{
 		printf("element - %d: ",i+1);
 		fflush(stdin);	fflush(stdout);
-		scanf("%d",&input[i]);
+		scanf("%d",pint+i);
 
 	}
 
-	int *pint=&input[0];
 	printf("The elements of array in reverse order are :\n");
 
 	for(i=size-1;i>=0;i--)
